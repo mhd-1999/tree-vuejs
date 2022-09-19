@@ -59,7 +59,7 @@ export default {
     },
     handleChangeInput() {
       const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/; // eslint-disable-line
-      if (this.department.match(format) || this.department == null) {
+      if (this.department.match(format) || this.department == "") {
         this.isValidate = true;
         this.isDisabled = true;
         this.$store.commit("SET_DISABLED", this.isDisabled);
